@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+</head>
+<body>
+    <h1>Disease Prediction</h1>
+    <form action="/predict2" method="post">
+        <label for="symptoms">Enter symptoms separated by commas:</label>
+        <input type="text" id="symptoms" name="symptoms" required>
+        <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
